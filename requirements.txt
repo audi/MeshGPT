@@ -14,7 +14,7 @@ matplotlib-inline==0.1.6
 moviepy==1.0.3
 numpy==1.24.4
 omegaconf==2.3.0
-Pillow==10.3.0
+Pillow==12.1.1
 pymeshlab==2022.2.post2
 pytorch-lightning==2.0.3
 scikit-image==0.21.0
