@@ -16,6 +16,12 @@ numpy==1.24.4
 omegaconf==2.3.0
 Pillow==12.2.0
 pymeshlab==2022.2.post2
+# CVE-2026-31221 / GHSA-75m9-98v2-hjpm: pytorch-lightning 2.0.3 contains an insecure
+# deserialization vulnerability in LightningModule.load_from_checkpoint(), which calls
+# torch.load() without weights_only=True. No patched version is available at this time.
+# The vulnerable API (load_from_checkpoint) is NOT directly called in this codebase;
+# checkpoint loading is done manually via torch.load() + load_state_dict(). A human
+# reviewer should update this pin once a patched version is released.
 pytorch-lightning==2.0.3
 scikit-image==0.21.0
 scikit-learn==1.2.1
